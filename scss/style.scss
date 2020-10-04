@@ -132,7 +132,7 @@ img {
 
   &__list {
     text-align: center;
-    padding: 2.5rem;
+    padding-top: 2.5rem;
   }
 
   &__item {
@@ -156,7 +156,7 @@ img {
 
 // SHOW NAVBAR
 .show {
-  right: 0;
+  right: -5%;
 }
 
 // ----- HOME SECTION -----
@@ -187,7 +187,7 @@ img {
     left: 22%;
     width: 235px;
     height: 353px;
-    // z-index: var(--z-tooltip);
+    z-index: var(--z-tooltip);
   }
 
   &__social {
@@ -206,6 +206,7 @@ img {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     padding-top: 2rem;
+    padding-right: 0.5rem;
     font-size: var(--h2-font-size);
     font-weight: $font-black;
   }
@@ -221,5 +222,73 @@ img {
     &-icon {
       padding-left: 4.25rem;
     }
+  }
+}
+
+// ----- MEDIA QUERIES -----
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .main {
+    height: 100vh;
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+      padding-top: 0;
+    }
+
+    &__item {
+      margin-left: 3rem;
+      margin-bottom: 0;
+    }
+
+    &__link {
+      text-transform: initial;
+    }
+
+    &__toggle,
+    &__close {
+      display: none;
+    }
+  }
+
+  .home {
+    grid-template-columns: 4fr 1fr;
+
+    &__title {
+      top: 16%;
+      left: 23%;
+    }
+
+    &__img {
+      width: 359px;
+      height: 559px;
+      top: 18%;
+      left: 48%;
+    }
+
+    &__social {
+      padding-top: 5rem;
+
+      &-link {
+        padding-bottom: 3rem;
+      }
+    }
+
+    &__subtitle {
+      padding-top: 18rem;
+      padding-right: 8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bg-grid {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
