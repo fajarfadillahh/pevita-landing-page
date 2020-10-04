@@ -1,0 +1,225 @@
+// ----- VARIABLES SCSS & CSS -----
+// Variables Scss
+$header-height: 3rem;
+$font-bold: 700;
+$font-black: 900;
+
+// Variables Css
+// Colors
+:root {
+  --first-color: #d8dbe2;
+  --second-color: #f2bf25;
+  --text-color: #000;
+  --white-color: #fff;
+}
+
+// Typography
+:root {
+  --body-font: "Raleway", sans-serif;
+
+  // Fonts Size Mobile Version
+  --h2-font-size: 1.25rem;
+  --big-font-size: 3rem;
+  --normal-font-size: 0.93rem;
+  --smaller-font-size: 0.75rem;
+
+  // Fonts Size Desktop Version
+  @media screen and (min-width: 768px) {
+    --h2-font-size: 2rem;
+    --big-font-size: 6rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+// Z-ndex
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+// ----- BASE -----
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: $header-height 0 0 0;
+  font-family: var(--body-font);
+  background: var(--first-color);
+  color: var(--text-color);
+  font-weight: $font-bold;
+  overflow: hidden;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// ----- LAYOUT -----
+.bg-grid {
+  max-width: 1200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-modal);
+  background: var(--first-color);
+}
+
+// ----- NAVBAR SECTION -----
+.nav {
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    font-weight: $font-black;
+  }
+
+  &__menu {
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background: var(--white-color);
+      width: 85%;
+      height: 100vh;
+      padding: 0.74rem;
+      z-index: var(--z-modal);
+      font-weight: $font-black;
+      transition: 0.3s;
+    }
+  }
+
+  &__close {
+    text-align: right;
+
+    &-icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &__list {
+    text-align: center;
+    padding: 2.5rem;
+  }
+
+  &__item {
+    margin-bottom: 2.5rem;
+  }
+
+  &__link {
+    color: var(--text-color);
+    text-transform: uppercase;
+
+    &:hover {
+      color: #575757;
+    }
+  }
+
+  &__toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+// SHOW NAVBAR
+.show {
+  right: 0;
+}
+
+// ----- HOME SECTION -----
+.main {
+  height: calc(100vh - #{$header-height});
+}
+
+.home {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-content: flex-end;
+  z-index: var(--z-normal);
+
+  &__title {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    font-size: var(--big-font-size);
+    font-weight: $font-black;
+    z-index: var(--z-fixed);
+  }
+
+  &__img {
+    position: absolute;
+    top: 10%;
+    left: 22%;
+    width: 235px;
+    height: 353px;
+    // z-index: var(--z-tooltip);
+  }
+
+  &__social {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding-top: 2rem;
+
+    &-link {
+      margin-bottom: 2rem;
+      color: var(--text-color);
+      font-size: var(--smaller-font-size);
+    }
+  }
+
+  &__subtitle {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding-top: 2rem;
+    font-size: var(--h2-font-size);
+    font-weight: $font-black;
+  }
+
+  &__button {
+    position: absolute;
+    right: -1rem;
+    bottom: 0;
+    padding: 1rem;
+    background: var(--text-color);
+    color: var(--white-color);
+
+    &-icon {
+      padding-left: 4.25rem;
+    }
+  }
+}

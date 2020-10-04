@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pevita Portfolio Landing Page</title>
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header class="header">
+      <nav class="nav bg-grid">
+        <div>
+          <a href="#" class="nav__logo">PEVITA</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__close">
+            <ion-icon
+              name="close-outline"
+              class="nav__close-icon"
+              id="nav-close"
+            ></ion-icon>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Fasion</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Sessions</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="main bg-grid">
+      <div class="home">
+        <h1 class="home__title">
+          HI, MY <br />
+          NAME IS <br />
+          PEVITA
+        </h1>
+
+        <div class="home__img"></div>
+
+        <div class="home__social">
+          <a href="#" class="home__social-link">Twitter</a>
+          <a href="#" class="home__social-link">Instagram</a>
+          <a href="#" class="home__social-link">Facebook</a>
+        </div>
+
+        <h2 class="home__subtitle">
+          INDONESIAN <br />
+          FASION <br />
+          MODEL
+        </h2>
+
+        <a href="#" class="home__button"
+          >Contact
+          <ion-icon
+            name="arrow-forward-outline"
+            class="home__button-icon"
+          ></ion-icon
+        ></a>
+      </div>
+    </main>
+
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- THREE JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+      integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ION ICONS -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/hover-effect.umd.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
